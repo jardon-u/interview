@@ -37,7 +37,7 @@ struct graph
   }
 };
 
-std::vector<std::size_t> unwind(std::vector<std::size_t> parents,
+std::vector<std::size_t> unwind(const std::vector<std::size_t>& parents,
                                 std::size_t a, std::size_t b)
 {
   if (b == a)
@@ -49,7 +49,7 @@ std::vector<std::size_t> unwind(std::vector<std::size_t> parents,
 
 // BFS Shortest Path / no weights on edges
 template <typename T>
-std::vector<std::size_t> shortest_path(graph<T> g, std::size_t a, std::size_t b)
+std::vector<std::size_t> shortest_path(const graph<T>& g, std::size_t a, std::size_t b)
 {
   std::vector<bool>        seen(g.nodes.size());
   std::vector<std::size_t> parents(g.nodes.size());
