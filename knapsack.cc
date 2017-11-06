@@ -38,7 +38,7 @@ void println(const std::string& msg, int depth)
 
 // KnapSnack Problem Solver with Memoisation
 // Pseudo polynomial O(nW)
-ks& max_value_set(std::vector<item> items, int max_w, int depth,
+ks& max_value_set(const std::vector<item>& items, int max_w, int depth,
                   std::map<int, ks>& memo)
 {
   if (max_w <= 0)
